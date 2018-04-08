@@ -19,7 +19,3 @@ class Motorbike {
         println("Driver The Motorbike...")
     }
 }
-
-fun main(args: Array<String>) {
-    println("Hello,World!")
-}

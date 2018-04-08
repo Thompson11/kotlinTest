@@ -10,7 +10,7 @@ package com.example.kotlin.demo
  * @see com.example.kotlin.demo <br>
  * @since V1.0 <br>
  */
-fun main(args: Array<String>) {
+fun tempTest() {
     val rawString = """
        fun helloWorld(val name : String) {
             println("Hello, world!)
