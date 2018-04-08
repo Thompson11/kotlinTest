@@ -1,3 +1,79 @@
 /**
 ## Modifiers
 */
+
+modifiers
+  : (modifier | annotations)*
+  ;
+
+typeModifiers
+  : (suspendModifier | annotations)*
+  ;
+
+modifier
+  : classModifier
+  : accessModifier
+  : varianceAnnotation
+  : memberModifier
+  : parameterModifier
+  : typeParameterModifier
+  : functionModifier
+  : propertyModifier
+  ;
+
+classModifier 类修饰符
+  : "abstract" 抽象类
+  : "final" 不可被继承final类
+  : "enum" 枚举类
+  : "open" 可继承open类
+  : "annotation" 注解类
+  : "sealed" 密封类
+  : "data" 数据类
+  ;
+
+memberModifier
+  : "override" 重写函数
+  : "open" 可被重写
+  : "final" 不可被重写
+  : "abstract" 抽象函数
+  : "lateinit" 后期初始化
+  ;
+
+accessModifier 访问权限控制, 默认是public
+  : "private"
+  : "protected"
+  : "public"
+  : "internal"  整个模块内（模块(module)是指一起编译的一组 Kotlin 源代码文件: 例如，一个 IntelliJ IDEA 模块，一个 Maven 工程, 或 Gradle 工程，通过 Ant 任务的一次调用编译的一组文件等）可访问
+  ;
+
+varianceAnnotation 泛型可变性
+  : "in"
+  : "out"
+  ;
+
+parameterModifier
+  : "noinline"
+  : "crossinline"
+  : "vararg" 变长参数
+  ;
+
+typeParameterModifier
+  : "reified"
+  ;
+
+functionModifier
+  : "tailrec" 尾递归
+  : "operator"
+  : "infix"
+  : "inline"
+  : "external"
+  : suspendModifier
+  ;
+
+propertyModifier
+  : "const"
+  ;
+
+suspendModifier
+  : "suspend"
+  ;
