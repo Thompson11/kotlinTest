@@ -1,7 +1,6 @@
 package com.example.kotlin.demoTest
 
-import com.example.kotlin.demo.Point
-import com.example.kotlin.demo.unaryMinus
+import com.example.kotlin.demo.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
@@ -24,5 +23,19 @@ class OperationDemoTest {
         val p = Point(1, 1)
         val np = -p
         println(np)
+    }
+
+    @Test
+    fun testCounterIndexPlus() {
+        val c = Counter(1)
+        val cplus = c + 10
+        println(cplus)
+    }
+
+    @Test
+    fun testInfixFunction() {
+        val person = Person("Jack", 20)
+        println(person.grow(2))
+        println(person grow 2)
     }
 }
