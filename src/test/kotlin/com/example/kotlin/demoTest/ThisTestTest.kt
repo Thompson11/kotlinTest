@@ -13,5 +13,6 @@ class ThisTestTest {
     fun execTest() {
         println(1.sum(1))
         println("abc".concat(123))
+        println("abc".concat(true))
     }
 }
