@@ -25,7 +25,7 @@ class Extend {
 
         val mList = mutableListOf<Int>(1, 2, 3, 4, 5)
         println("Before Swap:")
-        print(mList)
+        println(mList)
         mList.swap(0, mList.size - 1)
         println("After Swap:")
         println(mList)
@@ -36,7 +36,13 @@ class Extend {
         mmList.mswap(1, 2)
         println("After Swap:")
         println(mmList)
+    }
 
-
+    class Inner {
+        fun useExtensions() {
+            val mmmList = mutableListOf<Int>(100, 200, 300, 400, 500)
+            println(mmmList.lastIndex)
+            print(mmmList[mmmList.lastIndex])
+        }
     }
 }
